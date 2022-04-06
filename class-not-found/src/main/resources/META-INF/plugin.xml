@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>org.example.untitled5</id>
+    <name>APlugin Display Name Here</name>
+    <vendor email="ssupport@yourcompany.com" url="http://www.syourcompany.com">sYourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description sss for your plugin here.<br>]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.actions.IDEDoSomethingAction" class="com.actions.IDEDoSomethingAction" text="Do somthing">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <projectService
+                serviceImplementation="com.IDEProjectService">
+        </projectService>
+    </extensions>
+</idea-plugin>
